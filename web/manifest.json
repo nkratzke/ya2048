@@ -1,0 +1,18 @@
+{
+  "name": "ya2048",
+  "short_name": "ya2048",
+  "description": "Yet another 2048 game",
+  "lang": "en-US",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "__mock_values__icons": [
+    {
+      "src": "icon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}

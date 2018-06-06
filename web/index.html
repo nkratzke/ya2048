@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="scaffolded-by" content="https://github.com/google/stagehand">
+    <title>Yet another2048</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <script defer src="main.dart" type="application/dart"></script>
+    <script defer src="packages/browser/dart.js"></script>
+</head>
+
+<body>
+
+    <h1>Yet another 2048</h1>
+    <table id="scoring">
+        <tr>
+            <td>Points:</td>
+            <td>Score:</td>
+            <td></td>
+            <td>Highest Points</td>
+            <td>Highest Score</td>
+        </tr>
+        <tr>
+            <td class="points"></td>
+            <td class="score"></td>
+            <td></td>
+            <td class="highpoints"></td>
+            <td class="highscore"></td>
+        </tr>
+    </table>
+    <div id="output"></div>
+    <div id="gameover">
+        <h1>Game Over</h1>
+        <input id="playagain" type="button" value="Play again"/>
+    </div>
+
+    <footer>
+        Author: Nane Kratzke, Lübeck University of Applied Sciences<br />
+        Purpose: This is a Webtech demonstration game.<br />
+        <br />
+
+        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
+        <br />
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+        </a>
+    </footer>
+
+</body>
+</html>
