@@ -10,3 +10,4 @@ pubspec.lock
 doc/api/
 
 .idea/
+.idea/workspace.xml
