@@ -11,10 +11,10 @@ using [Dart](https://www.dartlang.org/) including:
 
 - Key-based control for desktop usage
 - Swipe-based control for mobile usage
-- CSS animations to indicate impossible folds by shaking
-- CSS animations to indicate successful folds by sliding
-- Web storage (localstorage) to realize a permanent client-side highscore
-- Offline usage by making use of service workers and the [PWA](https://pub.dartlang.org/packages/pwa) package
+- CSS animations to indicate impossible folds (shaking)
+- CSS animations to indicate successful folds (sliding up, down, left, right)
+- Web storage (localstorage) to realize a persistent client-side highscore
+- Offline usage via service workers and the [PWA](https://pub.dartlang.org/packages/pwa) package
 - Viewport related scaling
 
 You can [play](https://www.nkode.io/assets/webtech/demos/ya2048/) this game here:
