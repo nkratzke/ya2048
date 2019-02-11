@@ -1,3 +1,7 @@
+## 0.2.0
+
+- Updated to Dart 2 (mainly adaptions due to sound type system)
+
 ## 0.1.0
 
 - First game release
@@ -6,7 +10,6 @@
 - CSS animations to indicate imposible folds by shaking
 - CSS anomations to indicate successful folds by sliding
 - Offline usage by making use of service workers and the PWA package
-
 
 ## 0.0.1
 

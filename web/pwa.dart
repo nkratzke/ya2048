@@ -1,3 +1,4 @@
+/*
 import 'package:pwa/worker.dart';
 import 'package:ya2048/pwa/offline_urls.g.dart' as offline;
 
@@ -27,3 +28,4 @@ void main() {
   // Start the worker.
   worker.run(version: offline.lastModified);
 }
+*/

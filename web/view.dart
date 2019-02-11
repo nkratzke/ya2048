@@ -55,7 +55,7 @@ class Ya2048View {
   //
   void animateMove(Symbol direction) {
     List<Element> elements = querySelectorAll('#output td');
-    List<List<Element>> field = partition(elements, _model.cols).toList();
+    List<List<dynamic>> field = partition(elements, _model.cols).toList() as List<List<dynamic>>;
     for (int row = 0; row < _model.rows; row++) {
       for (int col = 0; col < _model.cols; col++) {
         if (_model.moveable(row, col, direction)) {
@@ -72,7 +72,7 @@ class Ya2048View {
   //
   void animatePop(Point pos) {
     List<Element> elements = querySelectorAll('#output td');
-    List<List<Element>> field = partition(elements, _model.cols).toList();
+    List<List<dynamic>> field = partition(elements, _model.cols).toList() as List<List<dynamic>>;
     Element td = new Element.td();
     int n = _model.get(pos.y, pos.x);
     td.classes.add('pop');

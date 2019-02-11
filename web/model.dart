@@ -26,10 +26,10 @@ class Ya2048 {
   int get maximum => max(concat(_field));
 
   // Gets the highest points reached so far (and stored in local storage).
-  int get highestPoints => JSON.decode(_storage['highscore'])['points'];
+  int get highestPoints => jsonDecode(_storage['highscore'])['points'];
 
   // Gets the highest score (multiples of 2) reached so far (and stored in local storage).
-  int get highestScore => JSON.decode(_storage['highscore'])['score'];
+  int get highestScore => jsonDecode(_storage['highscore'])['score'];
 
   // Amount of rows.
   int get rows => this._field.length;
@@ -180,8 +180,8 @@ class Ya2048 {
 
   // Folds a list of values from left to right according to the 2048 rules.
   List<int> _foldl(List<int> list) {
-    final process = list.where((i) => i != 0).toList();
-    final merged = [];
+    List<int> process = list.where((i) => i != 0).toList();
+    final merged = <int>[];
     for (int i = 0; i < process.length; i++) {
       if (i < process.length - 1 && process[i] == process[i + 1]) {
         merged.add(2 * process[i++]);
@@ -195,8 +195,8 @@ class Ya2048 {
 
   // Folds a list of values from right to to left according to the 2048 rules.
   List<int> _foldr(List<int> list) {
-    final process = list.where((i) => i != 0).toList().reversed.toList();
-    final merged = [];
+    List<int> process = list.where((i) => i != 0).toList().reversed.toList();
+    final merged = <int>[];
     for (int i = 0; i < process.length; i++) {
       if (i < process.length - 1 && process[i] == process[i + 1]) {
         merged.add(2 * process[i++]);
@@ -256,15 +256,15 @@ class Ya2048 {
   // this will be done.
   void updateHighscore() {
     if (!_storage.containsKey('highscore')) {
-      _storage['highscore'] = JSON.encode({
+      _storage['highscore'] = jsonEncode({
         'points': this.score,
         'score': this.maximum
       });
     }
-    Map<String, int> highscore = JSON.decode(_storage['highscore']);
-    highscore['points'] = math.max(this.score, highscore['points']);
-    highscore['score'] = math.max(this.maximum, highscore['score']);
-    _storage['highscore'] = JSON.encode(highscore);
+    var highscore = jsonDecode(_storage['highscore']);
+    highscore['points'] = math.max(this.score, highscore['points'] as int);
+    highscore['score'] = math.max(this.maximum, highscore['score'] as int);
+    _storage['highscore'] = jsonEncode(highscore);
   }
 
   // Textual representation of the state (game field) of this model.
